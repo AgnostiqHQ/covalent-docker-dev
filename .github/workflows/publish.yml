@@ -26,7 +26,19 @@ on:
 
 jobs:
   release:
+    name: GHCR
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        image:
+          - ubuntu18-py38
+          - ubuntu18-py39
+          - ubuntu18-py310
+          - ubuntu20-py38
+          - ubuntu20-py39
+          - ubuntu20-py310
+          - centos7-py38
     steps:
       - name: Check out master
         uses: actions/checkout@v3
@@ -51,8 +63,8 @@ jobs:
         with:
           builder: ${{ steps.buildx.outputs.name }}
           context: .
-          file: ./ubuntu18-py38/Dockerfile
+          file: ./${{ matrix.image }}/Dockerfile
           platforms: linux/amd64,linux/arm64
           push: true
           tags: |
-            ghcr.io/agnostiqhq/covalent-dev/ubuntu18-py38:latest
+            ghcr.io/agnostiqhq/covalent-dev/${{ matrix.image }}:latest
