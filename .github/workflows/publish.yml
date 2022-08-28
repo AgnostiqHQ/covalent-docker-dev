@@ -52,7 +52,7 @@ jobs:
           builder: ${{ steps.buildx.outputs.name }}
           context: .
           file: ./ubuntu18-py38/Dockerfile
-          platforms: all
+          platforms: linux/amd64,linux/arm64
           push: true
           tags: |
             ghcr.io/AgnostiqHQ/covalent-dev/ubuntu18-py38:latest
