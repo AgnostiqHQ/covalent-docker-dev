@@ -55,4 +55,4 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: |
-            ghcr.io/AgnostiqHQ/covalent-dev/ubuntu18-py38:latest
+            ghcr.io/agnostiqhq/covalent-dev/ubuntu18-py38:latest
