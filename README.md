@@ -29,8 +29,8 @@ make clean # Deletes the local images
 To pull an image from ECR and use it:
 
 ```
-aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 348041629502.dkr.ecr.us-east-1.amazonaws.com
-docker pull 348041629502.dkr.ecr.us-east-1.amazonaws.com/covalent-bld:ubuntu18-py38
+aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin xxxxxxxxxxxxx.dkr.ecr.us-east-1.amazonaws.com
+docker pull xxxxxxxxxxxxx.dkr.ecr.us-east-1.amazonaws.com/covalent-bld:ubuntu18-py38
 ```
 
 Run the image and clone Covalent, and then install it:
