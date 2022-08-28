@@ -22,7 +22,7 @@
 FROM python:3.10-slim-buster
 
 RUN apt-get update \
-  && apt-get install -y --no-install-recommends curl gcc git \
+  && apt-get install -y --no-install-recommends curl gcc git rsync vim \
   && curl -sL https://deb.nodesource.com/setup_16.x | bash - \
   && apt-get install -y nodejs \
   && npm install --global yarn \
