@@ -37,6 +37,7 @@ jobs:
           - ubuntu20-py38
           - ubuntu20-py39
           - ubuntu20-py310
+          - ubuntu22-py38
           - centos7-py38
     steps:
       - name: Check out master
