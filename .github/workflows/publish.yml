@@ -31,12 +31,12 @@ jobs:
       fail-fast: false
       matrix:
         image:
-          - ubuntu18-py38
-          - ubuntu18-py39
-          - ubuntu18-py310
-          - ubuntu20-py38
-          - ubuntu20-py39
-          - ubuntu20-py310
+          - debian10-py38
+          - debian10-py39
+          - debian10-py310
+          - debian11-py38
+          - debian11-py39
+          - debian11-py310
           - centos7-py38
     steps:
       - name: Check out master
