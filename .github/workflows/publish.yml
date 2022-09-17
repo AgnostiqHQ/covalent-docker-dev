@@ -42,6 +42,7 @@ jobs:
           - ubuntu22-py39
           - ubuntu22-py310
           - centos7-py38
+          - centos7-py39
     steps:
       - name: Check out master
         uses: actions/checkout@v3
