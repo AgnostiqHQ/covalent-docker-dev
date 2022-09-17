@@ -37,6 +37,7 @@ jobs:
           - debian11-py38
           - debian11-py39
           - debian11-py310
+          - debian11-py311
           - ubuntu22-py38
           - centos7-py38
     steps:
