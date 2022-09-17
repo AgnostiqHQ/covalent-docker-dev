@@ -39,6 +39,8 @@ jobs:
           - debian11-py310
           - debian11-py311
           - ubuntu22-py38
+          - ubuntu22-py39
+          - ubuntu22-py310
           - centos7-py38
     steps:
       - name: Check out master
