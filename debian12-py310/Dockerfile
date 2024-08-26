@@ -15,18 +15,11 @@
 # limitations under the License.
 
 # syntax=docker/dockerfile:1
-FROM ubuntu:22.04
-
-ENV DEBIAN_FRONTEND=noninteractive
+FROM python:3.10-bookworm
 
 RUN apt-get update \
-  && apt-get install -y --no-install-recommends curl gcc git rsync vim software-properties-common gpg-agent \
-  && apt-add-repository -y ppa:deadsnakes/ppa \
-  && apt update \
-  && apt install -y python3.8 python3.8-distutils python3-pip \
-  && update-alternatives --install /usr/bin/python python /usr/bin/python3.8 1 \
-  && update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.8 1 \
-  && curl -sL https://deb.nodesource.com/setup_16.x | bash - \
-  && apt-get install -y nodejs \
-  && npm install --global yarn \
-  && rm -rf /var/lib/apt/lists/*
+    && apt-get install -y --no-install-recommends curl gcc git rsync vim \
+    && curl -sL https://deb.nodesource.com/setup_20.x | bash - \
+    && apt-get install -y nodejs \
+    && npm install --global yarn \
+    && rm -rf /var/lib/apt/lists/*
