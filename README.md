@@ -12,7 +12,7 @@ This repository contains a set of Dockerfiles which can be used to develop, buil
 
 - All combinations of Debian 11, 12, and Python 3.9, 3.10, 3.11
 
-To build a single one of these images locally, e.g., Debian 11 with Python 3.10, run the following:
+To build a single one of these images locally, e.g., Debian 12 with Python 3.10, run the following:
 
 ```
 docker build ./debian12-py310
