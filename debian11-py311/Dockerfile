@@ -20,13 +20,13 @@ FROM python:3.11-rc-slim-bullseye
 ENV AIOHTTP_NO_EXTENSIONS=1
 
 RUN apt-get update \
-  && apt-get install -y --no-install-recommends curl gcc git rsync vim libc6-dev autotools-dev automake libtool build-essential cmake pkg-config libopenblas-dev libzmq3-dev \
-  && curl -sL https://deb.nodesource.com/setup_16.x | bash - \
-  && apt-get install -y nodejs \
-  && npm install --global yarn \
-  && rm -rf /var/lib/apt/lists/*
+    && apt-get install -y --no-install-recommends curl gcc git rsync vim libc6-dev autotools-dev automake libtool build-essential cmake pkg-config libopenblas-dev libzmq3-dev \
+    && curl -sL https://deb.nodesource.com/setup_20.x | bash - \
+    && apt-get install -y nodejs \
+    && npm install --global yarn \
+    && rm -rf /var/lib/apt/lists/*
 
 RUN pip install --upgrade pip \
-  && pip install cython \
-  && pip install aiohttp --no-binary aiohttp \
-  && pip install -e 'git+https://github.com/MagicStack/uvloop.git@master#egg=uvloop'
+    && pip install cython \
+    && pip install aiohttp --no-binary aiohttp \
+    && pip install -e 'git+https://github.com/MagicStack/uvloop.git@master#egg=uvloop'
