@@ -30,6 +30,9 @@ jobs:
           - debian12-py310
           - debian12-py311
           - debian12-py312
+    permissions:
+      contents: read
+      packages: write          
     steps:
       - name: Check out master
         uses: actions/checkout@v3
