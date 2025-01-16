@@ -27,12 +27,9 @@ jobs:
       fail-fast: false
       matrix:
         image:
-          - debian11-py39
-          - debian11-py310
-          - debian11-py311
-          - debian12-py39
           - debian12-py310
           - debian12-py311
+          - debian12-py312
     steps:
       - name: Check out master
         uses: actions/checkout@v3
