@@ -27,9 +27,10 @@ jobs:
       fail-fast: false
       matrix:
         image:
-          - debian12-py310
-          - debian12-py311
-          - debian12-py312
+          - debian13-py310
+          - debian13-py311
+          - debian13-py312
+          - debian13-py313
     permissions:
       contents: read
       packages: write          
