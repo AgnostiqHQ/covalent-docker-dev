@@ -27,17 +27,17 @@ jobs:
       fail-fast: false
       matrix:
         image:
-          - debian11-py39
-          - debian11-py310
-          - debian11-py311
-          - debian12-py39
-          - debian12-py310
-          - debian12-py311
+          - debian13-py310
+          - debian13-py311
+          - debian13-py312
+          - debian13-py313
+    permissions:
+      contents: read
+      packages: write          
     steps:
-      - name: Check out master
+      - name: Check out head
         uses: actions/checkout@v3
         with:
-          ref: master
           persist-credentials: false
       - name: Set up QEMU
         uses: docker/setup-qemu-action@master

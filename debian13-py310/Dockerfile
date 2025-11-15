@@ -1,4 +1,4 @@
-# Copyright 2021 Agnostiq Inc.
+# Copyright 2025 Agnostiq Inc.
 #
 # This file is part of Covalent.
 #
@@ -15,11 +15,11 @@
 # limitations under the License.
 
 # syntax=docker/dockerfile:1
-FROM python:3.9-slim-bullseye
+FROM python:3.10-trixie
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends curl gcc git rsync vim \
-    && curl -sL https://deb.nodesource.com/setup_20.x | bash - \
+    && curl -sL https://deb.nodesource.com/setup_22.x | bash - \
     && apt-get install -y nodejs \
     && npm install --global yarn \
     && rm -rf /var/lib/apt/lists/*
